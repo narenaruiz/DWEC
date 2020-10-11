@@ -3,14 +3,16 @@ function division() {
 
     input1 = document.getElementById("input1").value;
 
-    console.log("El numero introduit es " + input1)
+    var division = input1 / 19;
+
+    //Utilizo el toFixed(x) para limitar el numero de decimales a lo que yo ponga.
+    var resultado = division.toFixed(3);
 
     if (input1 >= 0) {
-        //Utilizo el Math.trunc(x) con el cual el numero que le pases te lo devolvera sin decimales.
-        document.getElementById("results").innerHTML = "El numero sin decimales es: " + Math.trunc(input1)
+        document.getElementById("results").innerHTML = "El resultado de la division es: " + resultado
     } else {
         if (input1 < 0) {
-            document.getElementById("results").innerHTML = "El numero sin decimales es: " + Math.trunc(input1)
+            document.getElementById("results").innerHTML = "El resultado de la division es: " + resultado
         } else {
             document.getElementById("results").innerHTML = "No es un numero"
         }
