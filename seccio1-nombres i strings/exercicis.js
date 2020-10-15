@@ -65,13 +65,17 @@ function quitarDecimales() {
 function quitarEntero() {
 
     /*
-    No se si esta bien, me salen los decimales pero no son exactos, ademas no solo estan los
-    decimales sino que tambien esta el "0" . He probado de hacer un split pero no me funciona.
+    No se como hacer para que imprima el string usando el indexof.
     */
 
     //capturar contingut de camp "input1"
 
     input1 = document.getElementById("input1").value;
+
+    var lengthEntero = input1.indexOf(".");
+
+
+    /* Este metodo funciona pero no es del todo correcto:
 
     //Utilizo el Math.trunc(x) con el cual el numero que le pases te lo devolvera sin decimales.
     var numeroEntero = Math.trunc(input1)
@@ -88,6 +92,7 @@ function quitarEntero() {
             document.getElementById("results").innerHTML = "No es un numero"
         }
     }
+    */
 
 }
 
